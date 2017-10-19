@@ -1,0 +1,78 @@
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+% document class settings
+\documentclass[12pt,pdf,serif,hyperref={unicode}]{beamer}
+
+% preamble settings
+\usepackage{preamble}
+\mode<presentation>{
+    \usetheme{Warsaw}
+    \setbeamertemplate{footline}[page number]
+}
+
+% title page settings
+\defbeamertemplate*{title page}{customized}[1][]{
+    \begin{center}
+        \usebeamerfont{institute}\insertinstitute\par
+        \vfill
+        \usebeamerfont{subtitle}\inserttitle\par
+        \vfill
+        \usebeamerfont{institute}\insertsubtitle\par
+    \end{center}
+    \vfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{flushleft}
+            \phantom{aaaaaaaaaaaaaa}
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.35\textwidth}
+        \begin{flushleft}
+            \usebeamerfont{institute}
+            Студент гр.777\\
+            \insertauthor\par
+        \end{flushleft}
+    \end{minipage}
+    \vfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{flushleft}
+            \usebeamerfont{institute}
+            Руководитель практики\\
+            от предприятия\\
+            Старший инженер по качеству\\
+            С.Е. Солдатов\par
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.35\textwidth}
+        \begin{flushleft}
+            \usebeamerfont{institute}
+            Руководитель практики\\
+            ассистент каф. КИБЭВС\\
+            А.И. Гуляев\\
+            \phantom{aaaaaaaaaaaaaa}\par
+        \end{flushleft}
+    \end{minipage}
+    \vfill
+    \begin{center}
+        \usebeamerfont{institute}Томск \the\year\par
+    \end{center}
+%    \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+}
+
+% document information
+\title{Разработка программного обеспечения для проверки политик разграничения доступа к программным интерфейсам}
+\subtitle{Отчёт по производственной практике}
+\author{Иванов И.И.}
+\institute[ТУСУР]{
+    Министерство образования и науки Российской Федерации\\    Федеральное государственное бюджетное образовательное учреждение высшего образования\\
+    ТОМСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ СИСТЕМ УПРАВЛЕНИЯ И РАДИОЭЛЕКТРОНИКИ (ТУСУР)\\
+    Кафедра комплексной информационной безопасности электронно-вычислительных систем (КИБЭВС)
+}
+\date{\today}
+
+% body
+\begin{document}
+    \maketitle
+%    \tableofcontents
+    \input{chapters/1_slides}
+\end{document}
